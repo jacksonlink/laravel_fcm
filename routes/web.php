@@ -15,12 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\GraphicController;
 
-Route::get('/', [GraphicController::class, 'index']);
+Route::get('/', 'App\Http\Controllers\TabulationController@index');
 
-Route::get('/graficos', function () {
-    return view('graphics');
-});
 
-Route::get('/graficos/{id}', function ($id = 1) {
-    return view('graphic', ['id' => $id]);
-});
+Route::get('/grafico', 'App\Http\Controllers\GraphicController@index');

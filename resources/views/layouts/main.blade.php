@@ -22,10 +22,10 @@
                 <div class="cloapse navbar-colapse" id="navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Welcome</a>
+                            <a href="/" class="nav-link">Tabela</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/graficos" class="nav-link">Graficos</a>
+                            <a href="/grafico" class="nav-link">Grafico</a>
                         </li>
                     </ul>
                 </div>
@@ -35,7 +35,7 @@
         @yield('content')
 
         <footer>
-            <p>&copy; 2021</p>
+            <p style="text-align: right;">&copy; 2021</p>
         </footer>
 
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
