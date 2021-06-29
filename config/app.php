@@ -161,7 +161,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        App\Providers\GuzzleClientServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -175,6 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\GuzzleClientServiceProvider::class,
+        App\Providers\UserDataServiceProvider::class,
 
     ],
 
@@ -231,6 +232,6 @@ return [
 
     ],
 
-    'external_api' => env('TEST_API_URL'),
+    'external_api' => env('TEST_API_URL')
 
 ];

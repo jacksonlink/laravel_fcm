@@ -15,12 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\GraphicController;
 
-Route::get('/', 'App\Http\Controllers\TabulationController@index');
+Route::get('/', function(){
+    return view('welcome');
+});
+
+Route::get('/tabela/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\TabulationController@index');
 
 Route::get('/grafico/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\GraphicController@index');
-
-
-Route::get('/teste', function () {
-    $httpClient = app('GuzzleHttp\Client'); // ou app()->make('GuzzleHttp\Client').
-    dd($httpClient);
-});

@@ -4,10 +4,15 @@
 
 @section('content')
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-
-    <div style="height:85vh; width:80vw">
-        <canvas id="canvas"></canvas>
+    <div class="row-lg-12">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+        <br>
+        <p class="text-muted">
+            Gráfico referente a busca pela data {{ \Carbon\Carbon::parse($datagte)->format('d/m/Y') }}, estação {{ $estacao }}, sensor {{ $sensor }}. 
+        </p>
+        <div style="height:85vh; width:70vw">
+            <canvas id="canvas"></canvas>
+        </div>
     </div>
 
     <script>
@@ -57,6 +62,19 @@
                     backgroundColor: 'rgba(0, 255, 0, 0.4)',
                     borderColor: 'rgba(150, 255, 0)'
                 }*/]
+            },
+            options: {
+                scales: {
+                    xAxes:[{
+                        display: true,
+                        type: 'time',
+                        time: {
+                            displayFormats: {
+                                'day': 'DD/MM/YYYY'
+                            }
+                        }
+                    }]
+                }
             }
         };
         var chart = new Chart(ctx, config);

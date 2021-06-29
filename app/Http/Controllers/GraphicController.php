@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp;
-use GuzzleHttp\Client;
 
 class GraphicController extends Controller
 {
@@ -16,6 +15,12 @@ class GraphicController extends Controller
         ]);
         $res = $res->getBody();
         $array_data = json_decode($res, true);
-        return view('graphics', ['json' => $array_data]);
+        return view('graphics', [
+            'json'      => $array_data, 
+            'estacao'   => $estacao, 
+            'sensor'    => $sensor, 
+            'orderby'   => $orderby, 
+            'datagte'   => $datagte
+        ]);
     }
 }

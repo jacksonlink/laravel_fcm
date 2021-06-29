@@ -13,19 +13,29 @@
         <title>@yield('title')</title>
 
         <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/scripts.js"></script>
+
+        @push('head')
+            <script src="{{ asset('js/scripts.js') }}"></script>
+        @endpush
+
     </head>
 
     <body class="antialiased">
+
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="cloapse navbar-colapse" id="navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Tabela</a>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+                
+                <a href="/" class="nav-link">
+                    <img style="width: 300px;" src="http://www.funceme.br/wp-content/uploads/2021/04/FUNCEME-ORGAO-SEC-INVERTIDA-WEB-BRANCA.svg" alt="Fundação Cearense de Metereologia e Recursos Hídricos">
+                </a>
+
+                <div class="cloapse navbar-colapse justify-content-center id="navbar">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item" style="width:150px; text-align:center;">
+                            <a href="/tabela/375/22/data,desc/2010-01-01" class="nav-link">TABELA</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/grafico/375/22/data,desc/2010-01-01" class="nav-link">Grafico</a>
+                        <li class="nav-item" style="width:150px; text-align:left;">
+                            <a href="/grafico/375/22/data,desc/2010-01-01" class="nav-link">GRÁFICO</a>
                         </li>
                     </ul>
                 </div>
@@ -34,7 +44,7 @@
 
         @yield('content')
 
-        <footer>
+        <footer class="text-muted" style="position:fixed; bottom:0;">
             <p style="text-align: right;">&copy; 2021</p>
         </footer>
 
