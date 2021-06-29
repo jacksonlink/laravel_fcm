@@ -17,5 +17,4 @@ use App\Http\Controllers\GraphicController;
 
 Route::get('/', 'App\Http\Controllers\TabulationController@index');
 
-
-Route::get('/grafico', 'App\Http\Controllers\GraphicController@index');
+Route::get('/grafico/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\GraphicController@index');

@@ -230,4 +230,6 @@ return [
 
     ],
 
+    'external_api' => env('TEST_API_URL'),
+
 ];

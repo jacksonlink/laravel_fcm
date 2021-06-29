@@ -25,7 +25,7 @@
                             <a href="/" class="nav-link">Tabela</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/grafico" class="nav-link">Grafico</a>
+                            <a href="/grafico/375/22/data,desc/2010-01-01" class="nav-link">Grafico</a>
                         </li>
                     </ul>
                 </div>
