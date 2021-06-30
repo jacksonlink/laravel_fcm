@@ -12,11 +12,10 @@
 
         <title>@yield('title')</title>
 
-        <link rel="stylesheet" href="/css/styles.css">
-
         @push('head')
-            <script src="{{ asset('js/scripts.js') }}"></script>
+            <script src="{{ asset('../js/main.js') }}"></script>
         @endpush
+        <script src="{{ asset('./resources/js/main.js') }}" ></script>
 
     </head>
 
@@ -24,7 +23,7 @@
 
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-                
+
                 <a href="/" class="nav-link">
                     <img style="width: 300px;" src="http://www.funceme.br/wp-content/uploads/2021/04/FUNCEME-ORGAO-SEC-INVERTIDA-WEB-BRANCA.svg" alt="Fundação Cearense de Metereologia e Recursos Hídricos">
                 </a>
@@ -34,8 +33,11 @@
                         <li class="nav-item" style="width:150px; text-align:center;">
                             <a href="/tabela/375/22/data,desc/2010-01-01" class="nav-link">TABELA</a>
                         </li>
-                        <li class="nav-item" style="width:150px; text-align:left;">
+                        <li class="nav-item" style="width:150px; text-align:center;">
                             <a href="/grafico/375/22/data,desc/2010-01-01" class="nav-link">GRÁFICO</a>
+                        </li>
+                        <li class="nav-item" style="width:150px; text-align:center;">
+                            <a href="/agenda" class="nav-link">AGENDA</a>
                         </li>
                     </ul>
                 </div>
