@@ -7,7 +7,7 @@
     <div class="row-lg-12" style="font-size: 15px;">
         <br>
         <p class="text-muted">
-            Tabela referente a busca pela data {{ \Carbon\Carbon::parse($datagte)->format('d/m/Y') }}, estação {{ $estacao }}, sensor {{ $sensor }}. 
+            &bull; Tabela referente a busca pela data {{ \Carbon\Carbon::parse($datagte)->format('d/m/Y') }}, estação {{ $estacao }} e sensor {{ $sensor }}.
         </p>
         <table class="table table-striped table-bordered table-hover">
             <tr>
