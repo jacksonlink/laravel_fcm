@@ -22,3 +22,5 @@ Route::get('/', function(){
 Route::get('/tabela/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\TabulationController@index');
 
 Route::get('/grafico/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\GraphicController@index');
+
+Route::get('/agenda', 'App\Http\Controllers\AgendaController@index');
