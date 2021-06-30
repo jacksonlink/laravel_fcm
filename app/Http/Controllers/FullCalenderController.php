@@ -16,15 +16,16 @@ class FullCalenderController extends Controller
     {
   
         if($request->ajax()) {
-       
+        
              $data = Event::whereDate('start', '>=', $request->start)
                        ->whereDate('end',   '<=', $request->end)
                        ->get(['id', 'title', 'start', 'end']);
-  
              return response()->json($data);
         }
-  
-        return view('fullcalender');
+        
+        $data = Event::get(['id', 'title', 'start', 'end']);
+
+        return view('fullcalender', ['json' => $data]);
     }
  
     /**
@@ -44,6 +45,16 @@ class FullCalenderController extends Controller
               ]);
  
               return response()->json($event);
+/*
+return view('graphics', [
+            'json'      => $array_data, 
+            'estacao'   => $estacao, 
+            'sensor'    => $sensor, 
+            'orderby'   => $orderby, 
+            'datagte'   => $datagte
+        ]);
+*/
+
              break;
   
            case 'update':

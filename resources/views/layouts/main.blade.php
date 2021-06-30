@@ -12,11 +12,6 @@
 
         <title>@yield('title')</title>
 
-        @push('head')
-            <script src="{{ asset('../js/main.js') }}"></script>
-        @endpush
-        <script src="{{ asset('./resources/js/main.js') }}" ></script>
-
     </head>
 
     <body class="antialiased">

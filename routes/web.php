@@ -24,7 +24,11 @@ Route::get('/tabela/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controlle
 
 Route::get('/grafico/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\GraphicController@index');
 
-Route::get('/agenda', 'App\Http\Controllers\AgendaController@index');
+Route::get('fullcalendar', [FullCalenderController::class, 'index']);
+//Route::get('/fullcalendar', 'App\Http\Controllers\FullCalenderController@index');
 
-Route::get('fullcalender', [FullCalenderController::class, 'index']);
-Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+Route::post('/fullcalenderAjax', 'App\Http\Controllers\FullCalenderController@ajax');
+//Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+
+
+
