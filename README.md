@@ -1,7 +1,10 @@
 <p align="center">
-    <a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" height="150"></a>
+    <a href="https://getbootstrap.com/"><img src="https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/Moby-logo.png?itok=sYH_JEaJ" height="150"></a>
+    <a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" height="150"></a>
     <a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" height="150"></a>
-    <a href="https://fullcalendar.io" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4https://avatars.githubusercontent.com/u/13825204?s=200&v=4.svg" height="150"></a>
+    <a href="https://fullcalendar.io/" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4.svg" height="150"></a>
+    <a href="https://www.postgresql.org/" target="_blank"><img src="https://pt.wikipedia.org/wiki/PostgreSQL#/media/Ficheiro:Postgresql_elephant.svg" height="150"></a>
+   
 </p>
 
 <!-- PROJECT LOGO -->
