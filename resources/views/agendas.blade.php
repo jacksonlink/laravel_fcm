@@ -3,6 +3,7 @@
 @section('title', 'Agenda')
 
 @section('content')
+{{$json}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
@@ -15,7 +16,7 @@
     <div class="container">
         <br>
         <p class="text-muted">
-            Agenda de compromissos
+            Agenda de compromissos. Click em uma data ou selecione um período para criar um compromisso.
         </p>
         <div id='calendar'></div>
     </div>
@@ -34,7 +35,7 @@
 
             var calendar = $('#calendar').fullCalendar({
                 editable: true,
-                height: window.innerHeight*0.8,
+                height: window.innerHeight*0.7,
                 //events: SITEURL + "/fullcalender",
                 events: JSON_DATA,
                 displayEventTime: true,
