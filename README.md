@@ -5,9 +5,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/jacksonlink/laravel_fcm">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">laravel_fcm</h3>
 
@@ -16,10 +13,7 @@
   </p>
 </p>
 
-<!-- GETTING STARTED -->
-## INICIANDO
-
-### Installation
+### INSTALAÇÃO
 
 1. Instalando dependencias
    ```sh
@@ -39,33 +33,33 @@
    ```
 5. Preparando o Docker Compose
    ```sh
-mkdir ~/postgres-demo && cd ~/postgres-demo && touch docker-compose.yml
+    mkdir ~/postgres-demo && cd ~/postgres-demo && touch docker-compose.yml
 
-Escreva no arquivo docker-compose.yml:
+    Escreva no arquivo docker-compose.yml:
 
-version: '3'
+    version: '3'
 
-services:
-  postgres:
-    image: postgres:13.1
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
-      timeout: 45s
-      interval: 10s
-      retries: 10
-    restart: always
-    environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=password
-      - APP_DB_USER=docker
-      - APP_DB_PASS=docker
-      - APP_DB_NAME=docker
-    volumes:
-      - ./db:/docker-entrypoint-initdb.d/
-    ports:
-      - 5432:5432
+    services:
+      postgres:
+        image: postgres:13.1
+        healthcheck:
+          test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
+          timeout: 45s
+          interval: 10s
+          retries: 10
+        restart: always
+        environment:
+          - POSTGRES_USER=root
+          - POSTGRES_PASSWORD=password
+          - APP_DB_USER=docker
+          - APP_DB_PASS=docker
+          - APP_DB_NAME=docker
+        volumes:
+          - ./db:/docker-entrypoint-initdb.d/
+        ports:
+          - 5432:5432
    ```
-   
+   6. Preparando o Volume
    ```sh
     mkdir db
     touch db/01-init.sh
@@ -92,7 +86,7 @@ services:
       COMMIT;
     EOSQL
     ```
-    
+    7. Subindo o docker e alimentando o banco
     ```sh
     sudo docker-compose up
     php artisan migrate
