@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\GraphicController;
-use App\Http\Controllers\FullCalenderController;
+use App\Http\Controllers\AgendaController;
 
 Route::get('/', function(){
     return view('welcome');
@@ -24,10 +24,10 @@ Route::get('/tabela/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controlle
 
 Route::get('/grafico/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\GraphicController@index');
 
-Route::get('fullcalendar', [FullCalenderController::class, 'index']);
+Route::get('agenda', [AgendaController::class, 'index']);
 //Route::get('/fullcalendar', 'App\Http\Controllers\FullCalenderController@index');
 
-Route::post('/fullcalenderAjax', 'App\Http\Controllers\FullCalenderController@ajax');
+Route::post('/agendaAjax', 'App\Http\Controllers\AgendaController@ajax');
 //Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
 
 

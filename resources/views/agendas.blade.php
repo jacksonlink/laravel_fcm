@@ -3,43 +3,119 @@
 @section('title', 'Agenda')
 
 @section('content')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/pt-br.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-    <h1> AGENDA </h1>
+    <div class="container">
+        <br>
+        <p class="text-muted">
+            Agenda de compromissos
+        </p>
+        <div id='calendar'></div>
+    </div>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+        $(document).ready(function () {
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+            var SITEURL = "{{ url('/') }}";
+            var JSON_DATA = @json($json);
+            console.log(JSON_DATA)
+            $.ajaxSetup({
+                headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            var calendar = $('#calendar').fullCalendar({
+                editable: true,
+                height: window.innerHeight*0.8,
+                //events: SITEURL + "/fullcalender",
+                events: JSON_DATA,
+                displayEventTime: true,
+                editable: true,
+                eventRender: function (event, element, view) {
+                    if (event.allDay === 'true') {
+                        event.allDay = true;
+                    } else {
+                        event.allDay = false;
+                    }
+                },
+                selectable: true,
+                selectHelper: true,
+                select: function (start, end, allDay) {
+                    var title = prompt('Título do Evento:');
+                    if (title) {
+                        var start = $.fullCalendar.formatDate(start, "Y-MM-DD");
+                        var end = $.fullCalendar.formatDate(end, "Y-MM-DD");
+                        $.ajax({
+                            url: SITEURL + '/agendaAjax',
+                            data: {
+                                title: title,
+                                start: start,
+                                end: end,
+                                type: 'add'
+                            },
+                            type: "POST",
+                            success: function (data) {
+                                displayMessage("Evento Cadastrado");
+                                calendar.fullCalendar('renderEvent', {
+                                        id: data.id,
+                                        title: title,
+                                        start: start,
+                                        end: end,
+                                        allDay: allDay
+                                    },true);
+                                calendar.fullCalendar('unselect');
+                            }
+                        });
+                    }
+                },
+                eventDrop: function (event, delta) {
+                    var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD");
+                    var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD");
+                    $.ajax({
+                        url: SITEURL + '/agendaAjax',
+                        data: {
+                            title: event.title,
+                            start: start,
+                            end: end,
+                            id: event.id,
+                            type: 'update'
+                        },
+                        type: "POST",
+                        success: function (response) {
+                            displayMessage("Evento Atualizado");
+                        }
+                    });
+                },
+                eventClick: function (event) {
+                    var deleteMsg = confirm("Deseja realmente remover o evento?");
+                    if (deleteMsg) {
+                        $.ajax({
+                            type: "POST",
+                            url: SITEURL + '/agendaAjax',
+                            data: {
+                                id: event.id,
+                                type: 'delete'
+                            },
+                            success: function (response) {
+                                calendar.fullCalendar('removeEvents', event.id);
+                                displayMessage("Evento Removido");
+                            }
+                        });
+                    }
+                }
+            });
+        });
 
-    <script src="{{ asset('js/jquery.min.js') }}" ></script>
-    <script src="{{ asset('js/popper.js') }}" ></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}" ></script>
-
-
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Calendar #01</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="calendar calendar-first" id="calendar_first">
-				    <div class="calendar_header">
-				        <button class="switch-month switch-left"> <i class="fa fa-chevron-left"></i></button>
-				         <h2></h2>
-				        <button class="switch-month switch-right"> <i class="fa fa-chevron-right"></i></button>
-				    </div>
-				    <div class="calendar_weekdays"></div>
-				    <div class="calendar_content"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
+        function displayMessage(message) {
+            toastr.success(message, 'Event');
+        }
+    </script>
 @endsection
