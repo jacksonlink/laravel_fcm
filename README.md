@@ -59,7 +59,7 @@
         ports:
           - 5432:5432
    ```
-   6. Preparando o Volume
+6. Preparando o Volume
    ```sh
     mkdir db
     touch db/01-init.sh
@@ -86,7 +86,7 @@
       COMMIT;
     EOSQL
     ```
-    7. Subindo o docker e alimentando o banco
+7. Subindo o docker e alimentando o banco
     ```sh
     sudo docker-compose up
     php artisan migrate
