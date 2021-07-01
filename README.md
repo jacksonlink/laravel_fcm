@@ -3,8 +3,7 @@
     
     <a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165"></a>
 
-    <a href="https://fullcalendar.io" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4" width="400"></a>
-    src=""
+    <a href="https://fullcalendar.io" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4" width="200"></a>
 </p>
 
 <!-- PROJECT LOGO -->
