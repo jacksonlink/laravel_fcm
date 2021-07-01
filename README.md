@@ -1,10 +1,10 @@
 <p align="center">
-    <a href="https://www.docker.com/"><img src="https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/Moby-logo.png?itok=sYH_JEaJ" height="90"></a>
-    <a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" height="90"></a>
-    <a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" height="90"></a>
-    <a href="https://fullcalendar.io/" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4.svg" height="90"></a>
-    <a href="https://www.chartjs.org/" target="_blank"><img src="https://www.chartjs.org/img/chartjs-logo.svg" height="90"></a>
-    <a href="https://www.postgresql.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" height="90"></a>
+    <a href="https://www.docker.com/"><img src="https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/Moby-logo.png?itok=sYH_JEaJ" height="95"></a>
+    <a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" height="95"></a>
+    <a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" height="100"></a>
+    <a href="https://fullcalendar.io/" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4.svg" height="95"></a>
+    <a href="https://www.chartjs.org/" target="_blank"><img src="https://www.chartjs.org/img/chartjs-logo.svg" height="95"></a>
+    <a href="https://www.postgresql.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" height="95"></a>
    
 </p>
 
