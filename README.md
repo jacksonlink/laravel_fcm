@@ -18,9 +18,9 @@
 ### INSTALAÇÃO
 
 1. Instalando dependencias
-   ```sh
-    sudo apt install php7.4-cli && sudo apt install php-pgsql && sudo apt install composer && sudo apt install curl && sudo apt-get install php-xml
-   ```
+```sh
+sudo apt install php7.4-cli && sudo apt install php-pgsql && sudo apt install composer && sudo apt install curl && sudo apt-get install php-xml
+```
 2. Clonando projeto Git
    ```sh
     git clone https://github.com/jacksonlink/laravel_fcm.git && cd laravel_fcm && composer install
