@@ -1,7 +1,7 @@
 <p align="center">
-    <a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" height="150"></a>
+    <a href="https://getbootstrap.com/"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" height="125"></a>
     <a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a>
-    <a href="https://fullcalendar.io" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4https://avatars.githubusercontent.com/u/13825204?s=200&v=4.svg" height="150"></a>
+    <a href="https://fullcalendar.io" target="_blank"><img src="https://avatars.githubusercontent.com/u/13825204?s=200&v=4https://avatars.githubusercontent.com/u/13825204?s=200&v=4.svg" height="125"></a>
 </p>
 
 <!-- PROJECT LOGO -->
