@@ -15,7 +15,8 @@
   <h3 align="center">LARAVEL_FCM</h3>
 
   <p align="center">
-    Leitura de arquivos .json fornecidos por api e exibição de agenda simples.
+    Leitura de arquivos .json fornecidos por api exibindo em tabela e gráfico;
+    Exibição de agenda simples.
   </p>
 </p>
 
