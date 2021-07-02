@@ -22,7 +22,7 @@ Route::get('/', function(){
 
 Route::get('/tabela/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\TabulationController@index');
 
-Route::get('/grafico/{estacao}/{sensor}/{orderby}/{datagte}', 'App\Http\Controllers\GraphicController@index');
+Route::get('/grafico/{estacao}/{sensor}/{orderby}/{datagte}/{charttype}', 'App\Http\Controllers\GraphicController@index');
 
 Route::get('agenda', [AgendaController::class, 'index']);
 //Route::get('/fullcalendar', 'App\Http\Controllers\FullCalenderController@index');

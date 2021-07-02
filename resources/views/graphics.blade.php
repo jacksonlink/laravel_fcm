@@ -8,7 +8,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
         <br>
         <p class="text-muted">
-            &bull; Gráfico referente a busca pela data {{ \Carbon\Carbon::parse($datagte)->format('d/m/Y') }}, estação {{ $estacao }} e sensor {{ $sensor }}. 
+            &bull; Gráfico referente a busca pela data {{ \Carbon\Carbon::parse($datagte)->format('d/m/Y') }}, estação {{ $estacao }} e sensor {{ $sensor }}.
         </p>
         <div style="height:85vh; width:70vw">
             <canvas id="canvas"></canvas>
@@ -43,7 +43,8 @@
 
         var ctx = canvas.getContext('2d');
         var config = {
-            type: 'line',
+            //type: 'line',
+            type: '{{ $charttype }}',
             data: {
                 labels: labels,
                 datasets: [{

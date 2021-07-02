@@ -29,7 +29,7 @@
                             <a href="/tabela/375/22/data,desc/2010-01-01" class="nav-link">TABELA</a>
                         </li>
                         <li class="nav-item" style="width:150px; text-align:center;">
-                            <a href="/grafico/375/22/data,desc/2010-01-01" class="nav-link">GRÁFICO</a>
+                            <a href="/grafico/375/22/data,desc/2010-01-01/line" class="nav-link">GRÁFICO</a>
                         </li>
                         <li class="nav-item" style="width:150px; text-align:center;">
                             <a href="/agenda" class="nav-link">AGENDA</a>
