@@ -104,4 +104,4 @@ Fonte: [https://graspingtech.com/docker-compose-postgresql/](https://graspingtec
 <img src="https://i.imgur.com/2F9qyJM.png" width="400">
 <img src="https://i.imgur.com/pfcs6Rv.png" width="400">
 <img src="https://i.imgur.com/4vwcEnY.png" width="400">
-<img src="https://i.imgur.com/2F9qyJM.png" width="400">
+<img src="https://i.imgur.com/wa0X5m4.png" width="400">
