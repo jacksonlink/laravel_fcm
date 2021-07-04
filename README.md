@@ -101,7 +101,7 @@ php artisan db:seed
  ```
 Fonte: [https://graspingtech.com/docker-compose-postgresql/](https://graspingtech.com/docker-compose-postgresql/)
 
-<img src="https://i.imgur.com/2F9qyJM.png" height="200">
-<img src="https://i.imgur.com/pfcs6Rv.png" height="200">
-<img src="https://i.imgur.com/4vwcEnY.png" height="200">
-<img src="https://i.imgur.com/2F9qyJM.png" height="200">
+<img src="https://i.imgur.com/2F9qyJM.png" width="400">
+<img src="https://i.imgur.com/pfcs6Rv.png" width="400">
+<img src="https://i.imgur.com/4vwcEnY.png" width="400">
+<img src="https://i.imgur.com/2F9qyJM.png" width="400">
